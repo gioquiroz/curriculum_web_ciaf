@@ -52,9 +52,13 @@ header nav ul li:hover span {
     grid-template-rows: 2.3fr 1.6fr; 
     gap: 0px 0px; 
 }
-article  div img {
+.content-grid div img {
     border-radius: 100%;
     width: 100%;
+}
+.content-grid div > p {
+    color: var(--white);
+    font-size: 1.3rem;
 }
 
 @media (min-width: 994px) {
