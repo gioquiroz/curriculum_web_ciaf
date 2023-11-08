@@ -1,7 +1,7 @@
 :root {
     --letter_1: 'Poppins', sans-serif;
     --letter_2: 'Kanit', sans-serif;
-    --head_bg: #08295e;
+    --head_bg: #102b4c;
     --white: #FFFFFF;
 }
 * {
@@ -10,12 +10,18 @@
     padding: 0;
     background-color: var(--head_bg);
 }
+.mtN-107 {
+    margin-top: -107px;
+}
 body {
     font-family: var(--letter_2)!important;
 }
 header {
     padding: 20px 50px;
     color: var(--white);
+}
+article {
+    height: 100vh;
 }
 .separate {
     width: 100%;
@@ -49,7 +55,6 @@ header nav ul li:hover span {
 .content-grid {
     display: grid; 
     grid-template-columns: 1.5fr 1.8fr; 
-    grid-template-rows: 2.3fr 1.6fr; 
     gap: 0px 0px; 
 }
 .content-grid div img {
@@ -62,8 +67,16 @@ header nav ul li:hover span {
 }
 
 @media (min-width: 994px) {
-    article  div img {
+    header {
+        position: sticky;
+        top: 0;
+        background-color: var(--head_bg);
+    }
+    .separate {
+        box-shadow: 0px 4px 9px white;
+    }
+    .content-grid  div img {
         width: 650px;
         object-fit: cover;
-    }    
+    }
 }
