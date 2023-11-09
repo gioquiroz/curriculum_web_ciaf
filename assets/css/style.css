@@ -12,6 +12,9 @@
     background-color: var(--head_bg);
     color: var(--white);
 }
+ul {
+    list-style: none;
+}
 .mtN-111 {
     margin-top: -111px;
 }
@@ -91,10 +94,10 @@ header nav ul li:hover span {
     gap: 0px 10px; 
 }
 .content-grid.languages {
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr; 
+    grid-auto-columns: 0.5fr; 
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr; 
     grid-template-rows: none;
-    gap: 10px 10px; 
+    gap: 20px 20px; 
 }
 .content-grid.medium .projects{
     border: 1px solid var(--white);
