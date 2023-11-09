@@ -1,7 +1,8 @@
 :root {
     --letter_1: 'Poppins', sans-serif;
     --letter_2: 'Kanit', sans-serif;
-    --head_bg: #12293f;
+    --head_bg: #0e141b;
+    --bg-2: 12293f;
     --white: #FFFFFF;
 }
 * {
@@ -13,6 +14,12 @@
 }
 .mtN-111 {
     margin-top: -111px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+.mb-70 {
+    margin-bottom: 70px;
 }
 body {
     font-family: var(--letter_2)!important;
@@ -83,10 +90,26 @@ header nav ul li:hover span {
     grid-template-rows: none; 
     gap: 0px 10px; 
 }
+.content-grid.languages {
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr; 
+    grid-template-rows: none;
+    gap: 10px 10px; 
+}
 .content-grid.medium .projects{
     border: 1px solid var(--white);
     border-radius: 10px;
     padding: 20px 30px;
+}
+.content-grid.languages .skill {
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    display: grid;
+    place-content: center;
+    padding: 50px;
+}
+.content-grid.languages .skill i {
+    font-size: 50px;
 }
 .content-grid div img {
     border-radius: 100%;
@@ -97,8 +120,21 @@ header nav ul li:hover span {
     margin-bottom: 0;
     letter-spacing: 1px;
 }
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.projects  > a i {
+    font-size: 50px;
+}
 .projects .content p {
     font-size: 11px;
+}
+.flip-horizontal-bottom {
+	-webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 @media (min-width: 994px) {
     header {
@@ -116,9 +152,14 @@ header nav ul li:hover span {
     .projects .content p {
         font-size: 1.05rem;
         font-weight: 300;
+        margin-bottom: 25px;
     }
     .I-do {
         font-size: 2.1rem!important;
+    }
+    .projects  > a:hover {
+        transform: scale(1.25);
+        transition: transform .5s;
     }
 }
 @media (min-width: 1200px) {
@@ -129,5 +170,25 @@ header nav ul li:hover span {
 @media (min-width: 1400px) {
     .I-do {
         font-size: 4.1rem!important;
+    }
+}
+@-webkit-keyframes flip-horizontal-bottom {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+    100% {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+    }
+    }
+    @keyframes flip-horizontal-bottom {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+    100% {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
     }
 }
