@@ -39,16 +39,16 @@
         <div class="separate"></div>
     </header>
     <article>
-        <div class="container">
+        <div class="container h-100 d-flex justify-content-center align-items-center">
             <div class="row">
                 <div class="col-12">
-                    <form action="" id="contact-form">
-                        <h2 class="I-do">CONTACTAME</h2>
+                    <form action="" id="contact-form" class="d-flex flex-column align-items-center">
+                        <h2 class="I-do mb-5">CONTACTAME</h2>
                         <ul>
-                            <li><input type="name"></li>
-                            <li><input type="email"></li>
-                            <li><textarea name="" id="" cols="30" rows="10"></textarea></li>
-                            <li><input type="submit"></li>
+                            <li><input type="name" placeholder="Nombre" required></li>
+                            <li><input type="email" placeholder="Correo electrónico" required></li>
+                            <li><textarea name="" id="" cols="30" rows="10" placeholder="Escribe..."></textarea></li>
+                            <li class="d-flex"><input type="submit"></li>
                         </ul>
                     </form>
                 </div>
